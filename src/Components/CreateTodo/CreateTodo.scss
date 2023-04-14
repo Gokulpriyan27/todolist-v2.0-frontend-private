@@ -1,0 +1,91 @@
+.createtodo-wrapper{
+    color: white;
+    height: 100vh;
+    background-color: #070b0d;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+
+    .form-wrapper{
+        width: 40% !important;
+        height: auto;
+        width: 1024px;
+        position: absolute;
+        top:10vh;
+
+
+        .form{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+        #title,#textarea{
+            margin-top: 10px;
+            background-color: #151a1e;
+            color: white;
+            border-color: #80858a;
+            
+            &:hover{
+                border-color: #5cebdf;
+            }
+        } 
+        Label{
+            font-size: 20px;
+            color: #5cebdf;
+        }
+
+        Button{
+            width: 30%;
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px !important;
+            color: #2a2e32 !important;
+            background-color: #5cebdf !important;
+            border: 1px solid #5cebdf !important;
+            &:hover{
+                background-color: #9ef9e0 !important;
+                border: 1px solid #9ef9e0 !important;
+                transition: 0.1s ease-in;
+                transform: scale(0.97);
+            }
+        }
+            #textarea{
+                min-height:120px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .createtodo-wrapper{
+
+
+        .form-wrapper{
+            width: 80% !important;
+        }
+    }
+ }
+
+ @media only screen and (max-width: 820px) {
+    .createtodo-wrapper{
+
+
+        .form-wrapper{
+            width: 70% !important;
+        }
+    }
+ }
+
+ @media only screen and (max-width: 912px) {
+    .createtodo-wrapper{
+
+
+        .form-wrapper{
+            width: 70% !important;
+        }
+    }
+ }
