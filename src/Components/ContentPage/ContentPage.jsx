@@ -25,7 +25,7 @@ function ContentPage() {
     try {
       setIsLoading(true);
       const response = await axios.get(
-        `${import.meta.env.VITE_BACKEND_URL}/api/gettodos/${userid}`,{withCredentials:true});
+        `https://todolist-backend-8zem.onrender.com/api/gettodos/${userid}`,{withCredentials:true});
       if (response.status === 200) {
       
         setData(response.data.data);
@@ -48,7 +48,7 @@ function ContentPage() {
     try {
    
       const deleteres = await axios.delete(
-        `${import.meta.env.VITE_BACKEND_URL}/api/deletetodo/${userid}/${e._id}`,{withCredentials:true});
+        `https://todolist-backend-8zem.onrender.com/api/deletetodo/${userid}/${e._id}`,{withCredentials:true});
       if (deleteres.status === 201) {
     
         getContents();

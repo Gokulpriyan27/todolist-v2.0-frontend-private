@@ -44,7 +44,7 @@ function Register() {
             });
           setisLoading(false);
       }else{
-        const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/auth/register`,payload,{withCredentials:true})
+        const response = await axios.post(`https://todolist-backend-8zem.onrender.com/auth/register`,payload,{withCredentials:true})
       if(response.status===201){
         setisLoading(false);
      

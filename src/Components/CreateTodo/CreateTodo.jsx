@@ -17,7 +17,7 @@ const {userid,todoid} = useParams();
 
 const getDetails= async()=>{
   try {
-    const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/gettodo/${userid}/${todoid}`,{withCredentials:true});
+    const response = await axios.get(`https://todolist-backend-8zem.onrender.com/api/gettodo/${userid}/${todoid}`,{withCredentials:true});
     if(response.status===200){
       setFormData({title:response.data.data.title,details:response.data.data.details})
     }
@@ -56,7 +56,7 @@ const todohandleSubmit = async()=>{
        
       }else{
         setLoading(true)
-        const todores = await axios.put(`${import.meta.env.VITE_BACKEND_URL}/api/updatetodo/${userid}/${todoid}`,formData,{withCredentials:true});
+        const todores = await axios.put(`https://todolist-backend-8zem.onrender.com/api/updatetodo/${userid}/${todoid}`,formData,{withCredentials:true});
         if(todores.status===200){
           setLoading(false)
           navigate(`/api/gettodos/${userid}`);
@@ -82,7 +82,7 @@ const todohandleSubmit = async()=>{
           theme: "dark",
           });
       }else{
-        const createTodo = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/createtodo/${userid}`,formData,{ withCredentials:true })
+        const createTodo = await axios.post(`https://todolist-backend-8zem.onrender.com/api/createtodo/${userid}`,formData,{ withCredentials:true })
       if(createTodo.status===201){
         navigate(`/api/gettodos/${userid}`);
       }
